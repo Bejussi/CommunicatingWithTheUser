@@ -1,8 +1,17 @@
 <resources>
     <string name="app_name">CommunicatingWithTheUser</string>
+
     <string name="toast_label">Toast</string>
     <string name="standard_toast_text">Standart Toast</string>
     <string name="custom_toast_text">Custom Toast</string>
     <string name="standard_toast_message">This is Standard Toast!</string>
     <string name="custom_toast_message">This is Custom Toast!</string>
+
+    <string name="snack_bar_label">Snack Bar</string>
+    <string name="regular_snack_bar_text">Regular Snack Bar</string>
+    <string name="action_snack_bar_text">Action Snack Bar</string>
+    <string name="regular_snack_bar_message">This is Regular Snack Bar!</string>
+    <string name="action_snack_bar_message">This is Action Snack Bar!</string>
+    <string name="actionText">Action</string>
+
 </resources>
