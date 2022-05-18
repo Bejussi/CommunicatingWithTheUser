@@ -29,6 +29,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/standardToastButton" />
 
+    <TextView
+        android:id="@+id/dialogTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/dialog_label"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regularSnackBarButton" />
+
     <Button
         android:id="@+id/standardToastButton"
         android:layout_width="wrap_content"
@@ -48,6 +59,44 @@
         android:text="@string/regular_snack_bar_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toastTextView2" />
+
+    <Button
+        android:id="@+id/simpleDialogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/simple_dialog_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTextView" />
+
+    <Button
+        android:id="@+id/choiseDialogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/choice_dialog_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpleDialogButton" />
+
+    <Button
+        android:id="@+id/dateDialogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/date_dialog_text"
+        app:layout_constraintStart_toEndOf="@+id/simpleDialogButton"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTextView" />
+
+    <Button
+        android:id="@+id/customDialogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/custom_dialog_text"
+        app:layout_constraintStart_toEndOf="@+id/choiseDialogButton"
+        app:layout_constraintTop_toBottomOf="@+id/dateDialogButton" />
 
     <Button
         android:id="@+id/customToastButton"

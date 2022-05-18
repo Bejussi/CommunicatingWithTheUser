@@ -14,4 +14,21 @@
     <string name="action_snack_bar_message">This is Action Snack Bar!</string>
     <string name="actionText">Action</string>
 
+    <string name="dialog_label">Dialog</string>
+    <string name="simple_dialog_text">Simple Dialog</string>
+    <string name="date_dialog_text">Date Dialog</string>
+    <string name="choice_dialog_text">Choice Dialog</string>
+    <string name="custom_dialog_text">Custom Dialog</string>
+    <string name="simple_dialog_title">Title Simple Dialog</string>
+    <string name="simple_dialog_message">Just message</string>
+    <string name="simple_dialog_action_yes">Yes</string>
+    <string name="simple_dialog_action_no">No</string>
+    <string name="simple_dialog_action_no_toast_text">Tap No!</string>
+    <string name="simple_dialog_action_yes_toast_text">Tap Yes!</string>
+    <string name="choice_dialog_title">Whats your favorite color?</string>
+    <string name="date_dialog_title">Choose Date</string>
+    <string name="custom_dialog_title"> Title Custom Dialog</string>
+    <string name="hint_edit_text">First Name</string>
+    <string name="custom_dialog_action">Ok</string>
+
 </resources>
