@@ -1,5 +1,6 @@
 package com.bejussi.communicatingwiththeuser
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -26,7 +27,7 @@ import kotlinx.android.synthetic.main.custom_toast_layout.*
 import kotlinx.android.synthetic.main.custom_toast_layout.view.*
 import java.util.*
 import androidx.core.app.NotificationCompat
-import usercomms.joemarini.example.com.usercommunications.NotificationResultActivity
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,24 +68,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.dateDialogButton -> showDateDialog()
             R.id.choiseDialogButton -> showChoiseDialog()
             R.id.customDialogButton -> showCustomDialog()
-            R.id.simpleNotificationButton -> showNotification()
+            R.id.simpleNotificationButton -> createNotification()
         }
     }
 
-    private fun showNotification() {
+    private fun createNotification() {
         // TODO: create the NotificationCompat Builder
         val builder = NotificationCompat.Builder(this, NOTIFY_CHANNEL)
 
         // TODO: Create the intent that will start the ResultActivity when the user
         // taps the notification or chooses an action button
-        val intent = Intent(this, NotificationResultActivity::class.java)
+        val intent = Intent(this,NotificationResultActivity::class.java)
 
         // TODO: Store the notification ID so we can cancel it later in the ResultActivity
         intent.putExtra("notifyID", NOTIFY_ID)
 
         // TODO: create a PendingIntent to fire for the notification
         val pendingIntent = PendingIntent.getActivity(this, NOTIFY_ID, intent,
-            PendingIntent.FLAG_IMMUTABLE)
+            PendingIntent.FLAG_CANCEL_CURRENT)
 
         // TODO: Set the three required items all notifications must have
         builder.setSmallIcon(R.drawable.ic_stat_sample_notification)
@@ -104,14 +105,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         builder.setContentIntent(pendingIntent)
 
         // TODO: Add an expanded layout to the notification
-
+        val bigTextStyle = NotificationCompat.BigTextStyle()
+        bigTextStyle.setBigContentTitle("This is a Big Notification")
+        bigTextStyle.bigText(resources.getString(R.string.LongMsg))
+        builder.setStyle(bigTextStyle)
 
         // TODO: Add action buttons to the Notification if they are supported
         // Use the same PendingIntent as we use for the main notification action
-
+        builder.addAction(R.mipmap.ic_launcher,"Action 1", pendingIntent)
+        builder.addAction(R.mipmap.ic_launcher,"Action 2", pendingIntent)
 
         // TODO: Set the lock screen visibility of the notification
-
+        builder.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
 
         // TODO: Build the finished notification and then display it to the user
         val notification = builder.build()

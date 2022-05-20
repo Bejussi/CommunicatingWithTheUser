@@ -1,11 +1,11 @@
-package usercomms.joemarini.example.com.usercommunications
+package com.bejussi.communicatingwiththeuser
 
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
-import com.bejussi.communicatingwiththeuser.R
 
 class NotificationResultActivity : AppCompatActivity() {
 
@@ -15,8 +15,8 @@ class NotificationResultActivity : AppCompatActivity() {
 
         // When launched from an addAction Intent, we must manually cancel
         // the notification otherwise it will stay in the status bar
-        val i = intent
-        val notifyID = i.getIntExtra("notifyID", 0)
+        val intent = intent
+        val notifyID = intent.getIntExtra("notifyID", 0)
 
         val mgr = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         mgr.cancel(notifyID)
