@@ -31,4 +31,7 @@
     <string name="hint_edit_text">First Name</string>
     <string name="custom_dialog_action">Ok</string>
 
+    <string name="notification_label">Notification</string>
+    <string name="simple_notification_text">Simple Notification</string>
+
 </resources>
